@@ -1,3 +1,6 @@
+import TitleContainer from "./TitleContainer";
+import PaymentOptionsContainer from "./PaymentOptionsContainer";
+
 export default function HeaderSection() {
   return (
     <section
@@ -7,28 +10,12 @@ export default function HeaderSection() {
         w-[727px]
         h-[216px]
         gap-[32px]
+        items-center
       "
     >
-      {/* Title_container */}
-      <div
-        className="
-          flex
-          flex-col
-          w-[727px]
-          h-[139px]
-          gap-[12px]
-        "
-      ></div>
+      <TitleContainer />
 
-      {/* Payment_option_container */}
-      <div
-        className="
-          flex
-          w-[569px]
-          h-[45px]
-          rounded-[9.17px]
-        "
-      ></div>
+      <PaymentOptionsContainer />
     </section>
   );
 }

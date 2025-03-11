@@ -28,7 +28,7 @@ export default function Page() {
         }}
       />
 
-      <div className="relative z-10 p-8">
+      <div className="relative z-10 min-h-screen flex justify-center items-start pt-8">
         <HeaderSection />
       </div>
     </section>
