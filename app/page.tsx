@@ -1,3 +1,5 @@
+import HeaderSection from "./components/HeaderSection";
+
 export default function Page() {
   return (
     <section className="relative min-h-screen bg-[#010B25] overflow-hidden">
@@ -25,6 +27,10 @@ export default function Page() {
           transformOrigin: "bottom right",
         }}
       />
+
+      <div className="relative z-10 p-8">
+        <HeaderSection />
+      </div>
     </section>
   );
 }
