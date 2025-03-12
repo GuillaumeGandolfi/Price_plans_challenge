@@ -34,7 +34,7 @@ export default function Page() {
           <HeaderSection />
         </div>
 
-        <div className="mt-16">
+        <div className="mt-16 mb-8">
           <PlansContainer />
         </div>
       </div>
