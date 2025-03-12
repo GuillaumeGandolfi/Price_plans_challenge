@@ -1,4 +1,5 @@
 import HeaderSection from "./components/HeaderSection";
+import PlansContainer from "./components/PlansContainer";
 
 export default function Page() {
   return (
@@ -28,8 +29,14 @@ export default function Page() {
         }}
       />
 
-      <div className="relative z-10 min-h-screen flex justify-center items-start pt-8">
-        <HeaderSection />
+      <div className="relative z-10 flex flex-col items-center">
+        <div className="pt-8">
+          <HeaderSection />
+        </div>
+
+        <div className="mt-16">
+          <PlansContainer />
+        </div>
       </div>
     </section>
   );
