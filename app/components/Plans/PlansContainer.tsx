@@ -1,4 +1,5 @@
 import EssentielPlan from "./EssentielPlan";
+import PremiumPlan from "./PremiumPlan";
 
 export default function PlansContainer() {
   return (
@@ -25,21 +26,7 @@ export default function PlansContainer() {
         }}
       ></div>
 
-      {/* Premium */}
-      <div
-        className="
-          w-[392px]
-          h-[614px]
-          rounded-[24px]
-          border
-          border-[#E7EBFF]
-          p-[32px]
-        "
-        style={{
-          background:
-            "radial-gradient(129.76% 100% at 50.04% 100%, rgba(3,25,83,0.7) 0%, rgba(24,116,255,0.7) 100%)",
-        }}
-      ></div>
+      <PremiumPlan />
     </div>
   );
 }
