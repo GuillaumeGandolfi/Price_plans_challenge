@@ -1,8 +1,6 @@
-export default function PlansContainer() {
-  return (
-    <div className="flex items-start gap-[32px] w-[1251px] h-[654px]">
-      {/* Plan Essentiel */}
-      <div
+export default function EssentielPlan() {
+  return(
+    <div
         className="w-[392px] h-[575px] rounded-[24px] border border-[#E7EBFF] p-[32px] flex flex-col items-center"
         style={{
           background:
@@ -55,7 +53,7 @@ export default function PlansContainer() {
                 <span
                   className="absolute text-[16px] font-medium leading-none text-white"
                   style={{
-                    top: "24px", // Ajuste cette valeur pour aligner le baseline
+                    top: "24px",
                     left: "105px",
                     letterSpacing: "-0.77px",
                   }}
@@ -144,7 +142,6 @@ export default function PlansContainer() {
               </p>
             </div>
 
-            {/* 4. +15 demandes d'itinéraires */}
             <div className="flex items-center w-[328px] h-[23px] gap-[12px]">
               <div className="relative w-[21.57px] h-[21.57px] rounded-[4.31px]">
                 <div
@@ -168,7 +165,6 @@ export default function PlansContainer() {
               </p>
             </div>
 
-            {/* 5. Plus de visibilité sur Google */}
             <div className="flex items-center w-[328px] h-[23px] gap-[12px]">
               <div className="relative w-[21.57px] h-[21.57px] rounded-[4.31px]">
                 <div
@@ -192,7 +188,6 @@ export default function PlansContainer() {
               </p>
             </div>
 
-            {/* 6. Réponse aux avis google inclus (pas de check) */}
             <div className="flex items-center w-[328px] h-[23px]">
               <p className="text-white text-[18px] font-normal leading-none">
                 Réponse aux avis google inclus
@@ -204,45 +199,13 @@ export default function PlansContainer() {
           className="w-[328px] h-[45px] rounded-[12px] border-[0.77px] border-white flex items-center justify-center mt-4"
           style={{ paddingTop: "16px", paddingBottom: "16px" }}
         >
-          {/* Bouton "Je m'abonne" */}
+          <p
+            className="text-white text-[18px] font-normal leading-none"
+            style={{ letterSpacing: "0" }}
+          >
+            Je m'abonne
+          </p>
         </div>
       </div>
-
-      {/* Ultime */}
-      <div
-        className="
-          w-[403px]
-          h-[654px]
-          rounded-[24px]
-          border
-          border-[#E7EBFF]
-          p-[32px]
-        "
-        style={{
-          backgroundColor: "#A3D7FD",
-          backgroundImage: "url('/Pattern.png')",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          boxShadow: "0px 0px 45.83px 4.58px #BCCAFF33",
-        }}
-      ></div>
-
-      {/* Premium */}
-      <div
-        className="
-          w-[392px]
-          h-[614px]
-          rounded-[24px]
-          border
-          border-[#E7EBFF]
-          p-[32px]
-        "
-        style={{
-          background:
-            "radial-gradient(129.76% 100% at 50.04% 100%, rgba(3,25,83,0.7) 0%, rgba(24,116,255,0.7) 100%)",
-        }}
-      ></div>
-    </div>
-  );
+  )
 }

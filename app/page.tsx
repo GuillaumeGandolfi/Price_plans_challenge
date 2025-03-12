@@ -1,5 +1,5 @@
 import HeaderSection from "./components/HeaderSection";
-import PlansContainer from "./components/PlansContainer";
+import PlansContainer from "./components/Plans/PlansContainer";
 
 export default function Page() {
   return (
