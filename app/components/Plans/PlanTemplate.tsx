@@ -2,7 +2,7 @@ import React from "react";
 
 interface PlanTemplateProps {
   width: number;
-  height: number;
+  height?: number;
   containerClass?: string;
   containerStyle?: React.CSSProperties;
 
@@ -10,7 +10,6 @@ interface PlanTemplateProps {
   price: string;
   priceSuffix: string;
 
-  /** Tableau des features, ex: ["+2500 vues/mois", "+60 clics..."] */
   features: string[];
 
   iconSrc?: string;
@@ -41,12 +40,16 @@ export default function PlanTemplate({
 }: PlanTemplateProps) {
   return (
     <div
-      className={`flex flex-col items-start rounded-[24px] border border-[#E7EBFF] p-[32px] ${
-        containerClass || ""
-      }`}
+      className={`
+        flex flex-col items-start
+        rounded-[24px]
+        border border-[#E7EBFF]
+        p-[32px]
+        ${containerClass || ""}
+      `}
       style={{
-        width,
-        height,
+        width: "100%",
+        maxWidth: width,
         ...containerStyle,
       }}
     >
@@ -124,7 +127,11 @@ export default function PlanTemplate({
           </span>
           <span
             className="absolute text-[16px] font-medium leading-none text-white"
-            style={{ top: "24px", left: "105px", letterSpacing: "-0.77px" }}
+            style={{
+              top: "24px",
+              left: "105px",
+              letterSpacing: "-0.77px",
+            }}
           >
             {priceSuffix}
           </span>
@@ -166,9 +173,12 @@ export default function PlanTemplate({
           </div>
         ))}
       </div>
+
       <div
-        className="w-[328px] h-[45px] rounded-[12px] border border-white flex items-center justify-center mt-4"
-        style={{ padding: "16px 0", background: subscribeButtonBg }}
+        className="w-full max-w-[328px] rounded-[12px] border border-white flex items-center justify-center mt-4 px-4 py-3"
+        style={{
+          background: subscribeButtonBg,
+        }}
       >
         <p className="text-white text-[18px] font-normal leading-none">
           Je m'abonne

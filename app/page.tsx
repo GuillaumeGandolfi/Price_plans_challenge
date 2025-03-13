@@ -4,7 +4,7 @@ import PlansContainer from "./components/Plans/PlansContainer";
 export default function Page() {
   return (
     <section className="relative min-h-screen bg-[#010B25] overflow-hidden">
-      {/* 2 ellipses pour ajouter un effet au background */}
+      {/* Ellipses de background */}
       <div
         className="absolute z-0 bg-[#1241C5]/50 rounded-full blur-[80px]"
         style={{
@@ -16,7 +16,6 @@ export default function Page() {
           transformOrigin: "bottom center",
         }}
       />
-
       <div
         className="absolute z-0 bg-[#1241C5]/50 rounded-full blur-[80px]"
         style={{
@@ -29,12 +28,15 @@ export default function Page() {
         }}
       />
 
-      <div className="relative z-10 flex flex-col items-center">
+      {/* Contenu principal */}
+      <div className="relative z-10 flex flex-col items-center max-w-[1440px] mx-auto px-4">
+        {/* Header */}
         <div className="pt-8">
           <HeaderSection />
         </div>
 
-        <div className="mt-16 mb-8">
+        {/* Plans */}
+        <div className="mt-16 mb-8 w-full">
           <PlansContainer />
         </div>
       </div>
