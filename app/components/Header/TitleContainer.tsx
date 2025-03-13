@@ -1,29 +1,12 @@
 export default function TitleContainer() {
   return (
-    <div
-      className="
-        flex
-        flex-col
-        w-[727px]
-        h-[139px]
-        gap-[12px]
-        items-center
-        justify-center
-      "
-    >
-      {/* Title label */}
+    <div className="flex flex-col items-center justify-center w-full gap-3">
       <div
         className="
-          flex
-          items-center
-          justify-center
-          w-[120px]
-          h-[30px]
-          rounded-[99px]
-          border
-          border-[#97BAFF]/40
-          py-[6px]
-          px-[28px]
+          flex items-center justify-center
+          rounded-full
+          border border-[#97BAFF]/40
+          py-[6px] px-[28px]
         "
         style={{
           background:
@@ -50,14 +33,12 @@ export default function TitleContainer() {
         </p>
       </div>
 
-      {/* Subtitle */}
       <h2
         className="
-          w-[727px]
-          h-[100px]
           text-center
-          text-[48px]
-          leading-[50px]
+          text-[32px]
+          md:text-[48px]
+          leading-[1.1]
           font-bold
           text-white
         "

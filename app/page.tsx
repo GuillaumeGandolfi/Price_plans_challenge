@@ -1,4 +1,4 @@
-import HeaderSection from "./components/HeaderSection";
+import HeaderSection from "./components/Header/HeaderSection";
 import PlansContainer from "./components/Plans/PlansContainer";
 
 export default function Page() {
