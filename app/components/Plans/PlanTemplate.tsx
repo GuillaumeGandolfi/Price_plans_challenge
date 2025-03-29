@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 interface PlanTemplateProps {
   width: number;
@@ -53,24 +54,14 @@ export default function PlanTemplate({
         ...containerStyle,
       }}
     >
+      {/* Icon */}
       {iconSrc && (
         <div
           className="relative w-[40px] h-[40px] rounded-[10.79px] overflow-hidden"
           style={{ backgroundColor: iconBg || "#0959E5" }}
         >
           {iconPattern && (
-            <img
-              src={iconPattern}
-              alt=""
-              className="absolute"
-              style={{
-                width: "40px",
-                height: "40px",
-                objectFit: "contain",
-                top: 0,
-                left: 0,
-              }}
-            />
+            <Image src={iconPattern} alt="" layout="fill" objectFit="contain" />
           )}
           <div
             className="absolute"
@@ -90,12 +81,13 @@ export default function PlanTemplate({
                 height: "20px",
               }}
             >
-              <img src={iconSrc} alt="plan-icon" className="w-full h-full" />
+              <Image src={iconSrc} alt="plan-icon" width={20} height={20} />
             </div>
           </div>
         </div>
       )}
 
+      {/* Titre, badge, prix */}
       <div className="mt-4 w-full">
         <div className="flex items-center gap-2">
           <p className="text-white text-[32px] font-medium leading-[100%] tracking-[-1px]">
@@ -138,6 +130,7 @@ export default function PlanTemplate({
         </div>
       </div>
 
+      {/* Séparateur */}
       <div
         className="w-full border border-transparent mt-6"
         style={{
@@ -147,6 +140,7 @@ export default function PlanTemplate({
         }}
       />
 
+      {/* Liste des features */}
       <div className="mt-6 flex flex-col gap-[16px] w-full">
         {features.map((feature, i) => (
           <div key={i} className="flex items-center gap-[12px]">
@@ -160,9 +154,11 @@ export default function PlanTemplate({
                   left: "6px",
                 }}
               >
-                <img
+                <Image
                   src="/vector-check.png"
                   alt="check"
+                  width={16}
+                  height={12}
                   className="w-full h-full"
                 />
               </div>
@@ -174,14 +170,13 @@ export default function PlanTemplate({
         ))}
       </div>
 
+      {/* Bouton */}
       <div
         className="w-full max-w-[328px] rounded-[12px] border border-white flex items-center justify-center mt-4 px-4 py-3"
-        style={{
-          background: subscribeButtonBg,
-        }}
+        style={{ background: subscribeButtonBg }}
       >
         <p className="text-white text-[18px] font-normal leading-none">
-          Je m'abonne
+          Je m&apos;abonne
         </p>
       </div>
     </div>
